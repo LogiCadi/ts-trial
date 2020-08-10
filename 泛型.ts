@@ -14,6 +14,11 @@ interface Person {
 
 type A = keyof Person;
 
-let pp = { a: { b: 1 } };
-
-console.log(pp?.a.b);
+let pp = {
+  a: {
+    b() {
+      console.log(1);
+    },
+  },
+};
+pp?.a?.b()
